@@ -1,0 +1,14 @@
+Package: rcvmfundos
+Type: Package
+Title: CVM Funds Data
+Version: 0.1.0
+Authors@R: person("Menegotto", "Joao H. R.", email = "joaohenrique@vokin.com.br",
+  role = c("aut", "cre"))
+Description: Functions to get and read data from the CVM sistem
+License: MIT + file LICENSE
+LazyData: TRUE
+RoxygenNote: 5.0.1
+Imports: dplyr,
+    RCurl,
+    XML,
+    methods
