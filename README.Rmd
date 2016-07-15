@@ -1,0 +1,28 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+Esse pacote foi desenvolvido para efetuar o download e leitura dos arquivos de dados de fundos de investimento disponibilizados em formato XML pelo sistema da CVM (Comissão de Valores Mobiliários), a SEC (Securities and Exchange Comission) brasileira.
+
+Para poder utilizar as funções, é necessário efetuar um cadastro no sistema da CVM e obter sua senha e login. Para conhecer os manuais do sistema acesse http://cvmweb.cvm.gov.br/SWB/Sistemas/SWS/DownloadInfs/ManualDownloadInfs.aspx e o cadastro pode ser efetuado em http://cvmweb.cvm.gov.br/SWB/Sistemas/SAU/Usuario/CpfCad.aspx.
+
+As principais funções são cvm_login, cvm_arqcomptc, read_cvmxmlfile. O código abaixo pode ser usado como exemplo de utilização trivial do pacote:
+
+```{r, error=TRUE}
+library(rcvmfundos)
+
+arquivo <- cvm_arqcomptc(soapheader = cvm_login(login = "xxxx", senha = "xxxxx"), date = "yyyy-mm-dd")
+df <- read_cvmxmlfile(arquivo)
+
+```
+
