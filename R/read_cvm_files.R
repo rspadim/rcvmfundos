@@ -5,7 +5,7 @@
 #'@export read_cvmxmlfile
 
 read_cvmxmlfile <- function(file){
-    x <- XML::xmlInternalTreeParse(file)
+    x <- XML::xmlInternalTreeParse(file, encoding = "UTF-8")
     informes <- XML::getNodeSet(x, "/ROOT/INFORMES/INFORME_DIARIO")
     informes <- XML::xmlToDataFrame(informes)
     cabecalho <- XML::getNodeSet(x, "/ROOT/CABECALHO")
@@ -29,7 +29,7 @@ read_cvmxmlfile <- function(file){
 
 read_cvmxmlcad <- function(file){
   x <- file
-  x <- XML::xmlInternalTreeParse(x)
+  x <- XML::xmlInternalTreeParse(x, encoding = "UTF-8")
   informes <- XML::getNodeSet(x, "/ROOT/PARTICIPANTES/CADASTRO")
   informes <- XML::xmlToDataFrame(informes)
   cabecalho <- XML::getNodeSet(x, "/ROOT/CABECALHO")
