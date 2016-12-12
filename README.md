@@ -10,5 +10,5 @@ library(rcvmfundos)
 arquivo <- cvm_arqcomptc(soapheader = cvm_login(login = "xxxx", senha = "xxxxx"), date = "yyyy-mm-dd")
 #> Error in soapheader[[1]]: índice fora de limites
 df <- read_cvmxmlfile(arquivo)
-#> Error in XML::xmlInternalTreeParse(file): objeto 'arquivo' não encontrado
+#> Error in XML::xmlInternalTreeParse(file, encoding = "UTF-8"): objeto 'arquivo' não encontrado
 ```

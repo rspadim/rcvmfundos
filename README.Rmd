@@ -18,7 +18,7 @@ Para poder utilizar as funções, é necessário efetuar um cadastro no sistema 
 
 As principais funções são cvm_login, cvm_arqcomptc, read_cvmxmlfile. O código abaixo pode ser usado como exemplo de utilização trivial do pacote:
 
-```{r, error=TRUE}
+```{r, error=TRUE, eval=TRUE}
 library(rcvmfundos)
 
 arquivo <- cvm_arqcomptc(soapheader = cvm_login(login = "xxxx", senha = "xxxxx"), date = "yyyy-mm-dd")
