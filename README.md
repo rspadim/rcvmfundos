@@ -8,7 +8,5 @@ As principais funções são cvm\_login, cvm\_arqcomptc, read\_cvmxmlfile. O có
 library(rcvmfundos)
 
 arquivo <- cvm_arqcomptc(soapheader = cvm_login(login = "xxxx", senha = "xxxxx"), date = "yyyy-mm-dd")
-#> Error in soapheader[[1]]: índice fora de limites
 df <- read_cvmxmlfile(arquivo)
-#> Error in XML::xmlInternalTreeParse(file, encoding = "UTF-8"): objeto 'arquivo' não encontrado
 ```
